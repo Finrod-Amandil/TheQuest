@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A2EAA76-1A80-48C3-918E-1F40AA10E540}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TheQuest</RootNamespace>
+    <AssemblyName>TheQuest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Axe.cs" />
+    <Compile Include="Bat.cs" />
+    <Compile Include="Board.cs" />
+    <Compile Include="Bomb.cs" />
+    <Compile Include="Bow.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="Door.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="EnemyActionType.cs" />
+    <Compile Include="Field.cs" />
+    <Compile Include="FieldAttribute.cs" />
+    <Compile Include="FieldEmptyException.cs" />
+    <Compile Include="FieldOccupiedException.cs" />
+    <Compile Include="FireBowl.cs" />
+    <Compile Include="GameStatus.cs" />
+    <Compile Include="HealthBar.cs" />
+    <Compile Include="InventoryIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InventoryInsertMode.cs" />
+    <Compile Include="IPlaceable.cs" />
+    <Compile Include="BoardException.cs" />
+    <Compile Include="Mace.cs" />
+    <Compile Include="MovementMode.cs" />
+    <Compile Include="OutsideBoardException.cs" />
+    <Compile Include="Target.cs" />
+    <Compile Include="TheQuestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheQuestForm.Designer.cs">
+      <DependentUpon>TheQuestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs" />
+    <Compile Include="Ghost.cs" />
+    <Compile Include="Ghoul.cs" />
+    <Compile Include="HealingPotion.cs" />
+    <Compile Include="IConsumable.cs" />
+    <Compile Include="IMoveable.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="InventoryFullException.cs" />
+    <Compile Include="InventorySlot.cs" />
+    <Compile Include="IStackable.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="NotEnoughItemsException.cs" />
+    <Compile Include="Painting.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Portal.cs" />
+    <Compile Include="Potion.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="Sword.cs" />
+    <Compile Include="TheQuestForm.RoomBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransparentPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WallFeature.cs" />
+    <Compile Include="Weapon.cs" />
+    <Compile Include="Wizard.cs" />
+    <EmbeddedResource Include="TheQuestForm.resx">
+      <DependentUpon>TheQuestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
