@@ -61,7 +61,7 @@ namespace TheQuest
 
             Dictionary<string, Image> currentPictures;
 
-            foreach (string dir in Directory.GetDirectories(@".\img\"))
+            foreach (string dir in Directory.GetDirectories(@".\..\..\Resources\img\"))
             {
                 string subdir = dir.Split(new char[] { '\\' }).Last();
                 currentPictures = subdir == "background" ? _backgroundPictures :
